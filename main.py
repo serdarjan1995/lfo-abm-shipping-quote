@@ -12,7 +12,7 @@ app = FastAPI(title="ABM Initiative Shipping Quote API", description="based on g
 shipping_client = ABMShippingRequestClient()
 
 
-@app.get("/shipping_quote")
+@app.get("/abm/shipping_quote")
 async def shipping_quote(req: Annotated[ShippingRequest, Depends(ShippingRequest)]) -> ShippingQuotesResponse:
     shipping_client.update_fields(**req.model_dump())
 
