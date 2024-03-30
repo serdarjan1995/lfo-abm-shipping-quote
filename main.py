@@ -6,7 +6,8 @@ from models import ShippingRequest, ShippingQuotesSummary, ShippingQuotesDetails
 from utils.abm_shipping_request import ABMShippingRequestClient
 from utils.helpers import try_parse_float
 
-app = FastAPI(title="ABM Initiative Shipping Quote API", description="based on google spreadsheet")
+app = FastAPI(title="ABM Initiative Shipping Quote API", description="based on google spreadsheet",
+              openapi_url="/abm/openapi.json", docs_url="/abm/docs", redoc_url="/abm/redoc")
 
 
 shipping_client = ABMShippingRequestClient()
