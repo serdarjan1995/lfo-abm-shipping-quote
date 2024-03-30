@@ -1,6 +1,8 @@
 version: "3.8"
 services:
-  tutorial:
+  abm-shipment-quote-api:
+    image: abm-shipment-quote-api
+    container_name: abm-shipment-quote-api
     build:
       context: .
       dockerfile: Dockerfile
