@@ -20,7 +20,7 @@ async def shipping_quote(req: Annotated[ShippingRequest, Depends(ShippingRequest
     shipping_quotes_summary = get_shipping_quotes_summary()
 
     shipping_quotes_details = get_shipping_quotes_details()
-    return {"summary": shipping_quotes_summary, "details": shipping_quotes_details}
+    return ShippingQuotesResponse(summary=shipping_quotes_summary, details=shipping_quotes_details)
 
 
 def get_shipping_quotes_details():
