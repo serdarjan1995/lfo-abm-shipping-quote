@@ -45,7 +45,7 @@ class ABMShippingRequestClient(GspreadClient):
 
     def update_fields(self, pickup_zip: int, delivery_zip: int, service_level: str, total_cu_ft: float, max_weight: int):
         self.worksheet.update(
-            [[pickup_zip], [delivery_zip], [service_level], [total_cu_ft], [max_weight]],
+            [[pickup_zip], [delivery_zip], [service_level], [max_weight], [total_cu_ft]],
             f'{self.PICKUP_ZIP_CELL}:{self.TOTAL_CU_FT_CELL}',
         )
 
