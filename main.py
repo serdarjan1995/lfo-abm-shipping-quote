@@ -51,12 +51,14 @@ def get_shipping_quotes_summary():
     fuel_surcharge = try_parse_float(shipping_summary_worksheet_values[1][0].replace("$", ''))
     remote_charges = try_parse_float(shipping_summary_worksheet_values[2][0].replace("$", ''))
     outsource_charges = try_parse_float(shipping_summary_worksheet_values[3][0].replace("$", ''))
-    total_charge = try_parse_float(shipping_summary_worksheet_values[4][0].replace("$", ''))
+    insurance = try_parse_float(shipping_summary_worksheet_values[4][0].replace("$", ''))
+    total_charge = try_parse_float(shipping_summary_worksheet_values[5][0].replace("$", ''))
     shipping_quotes_summary = ShippingQuotesSummary(
         delivery_surcharge=delivery_surcharge,
         fuel_surcharge=fuel_surcharge,
         remote_charges=remote_charges,
         outsource_charges=outsource_charges,
+        insurance=insurance,
         total_charge=total_charge,
     )
     return shipping_quotes_summary

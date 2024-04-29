@@ -1,7 +1,3 @@
-import gspread
-from gspread import Client, Spreadsheet, Worksheet
-from oauth2client.service_account import ServiceAccountCredentials
-
 from utils.gspread_client import GspreadClient
 
 
@@ -20,7 +16,8 @@ class ABMShippingRequestClient(GspreadClient):
     FUEL_SURCHARGE_CELL = "C14"
     REMOTE_CHARGES_CELL = "C15"
     OUTSOURCE_CHARGES_CELL = "C16"
-    TOTAL_CHARGES_CELL = "C17"
+    INSURANCE_CELL = "C17"
+    TOTAL_CHARGES_CELL = "C18"
 
     CALL_FOR_QUOTE = "Call for quote"
 

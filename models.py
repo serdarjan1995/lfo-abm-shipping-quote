@@ -21,6 +21,7 @@ class ShippingQuotesSummary(BaseModel):
     fuel_surcharge: float | str = Field(..., description="Fuel Surcharge")
     remote_charges: float | str = Field(..., description="Remote Charges")
     outsource_charges: float | str = Field(..., description="Ferry / Outsource Charges")
+    insurance: float | str = Field(..., description="Insurance Charges")
     total_charge: float | str = Field(..., description="Total Charge")
 
 

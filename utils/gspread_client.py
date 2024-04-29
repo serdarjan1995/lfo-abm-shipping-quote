@@ -20,6 +20,7 @@ class GspreadClient:
         return client
 
     def open_spreadsheet(self, name: str) -> Spreadsheet:
+        print(self.client.openall())
         self.spreadsheet = self.client.open(name)
         return self.spreadsheet
 
